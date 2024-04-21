@@ -14,10 +14,6 @@ object DatabaseFactory {
 
         val dotenv = dotenv()
 
-        /*val jdbcURL = "jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres"
-        val driver = "org.postgresql.Driver",
-        val user = "postgres.snjesejplulutplhyoeu",
-        val password = "zkRr1tD9bxLjbBkH"*/
         val database =  Database.connect(
             url = dotenv["DATABASE"].toString(),
             driver = dotenv["DATABASE_DRIVER"].toString(),
